@@ -152,7 +152,7 @@ The ability to separate blockchain-specific framework logic from the generic fun
 - [Move Playground](https://playground.pontem.network/) - Like [Remix](https://remix.ethereum.org/) for Move. Alpha version of a Web IDE. See [instructions](https://gist.github.com/borispovod/64b6d23741d8c1f4b0b958a3a74aa68d). Maintained by the Pontem team.
 
 ## Package Managers
-- [Movey](https://www.movey.net/) - A [crates.io](https://crates.io/)-style repository of Move packages.
+- [Movey](https://www.movey.net/) - A [crates.io](http://www.crates.io/)-style repository of Move packages.
 
 ## Wallets
 
