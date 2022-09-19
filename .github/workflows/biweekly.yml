@@ -1,0 +1,22 @@
+name: Broken link check
+on:
+  schedule:
+    - cron: "14 14 * * 1,4"
+
+jobs:
+  broken_link_checker_job:
+    runs-on: ubuntu-latest
+    name: Check for broken links
+    steps:
+    - name: Check for broken links
+      id: link-report
+      uses: celinekurpershoek/link-checker@v1.0.2
+      with:
+        # Required:
+        url: "${{ github.server_url }}/${{ github.repository }}/blob/${{ github.sha }}/README.md"
+        # optional:
+        honorRobotExclusions: false
+        ignorePatterns: "docs.github.com,visualstudio.com"
+        recursiveLinks: false # Check all URLs on all reachable pages (could take a while)
+    - name: Get the result
+      run: echo "${{steps.link-report.outputs.result}}"
