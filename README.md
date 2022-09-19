@@ -26,11 +26,13 @@ Move is a programming language for writing safe smart contracts originally devel
 - [IDEs](#ides)
 - [Package Managers](#package-managers)
 - [Wallets](#wallets)
+- [SDKs](#sdks)
 - [Papers](#papers)
   - [Language Design](#language-design)
   - [Static Analysis and Verification](#static-analysis-and-verification)
 - [Videos](#videos)
 - [Podcasts](#podcasts)
+- [Blog Posts](#blog-posts)
 
 ## Overview
 
@@ -46,6 +48,7 @@ Move is a programming language for writing safe smart contracts originally devel
 - [Pontem](https://github.com/pontem-network/pontem) - Substrate based parachain with MoveVM onboard (in [testnet](https://polkadot.js.org/apps/?rpc=wss://testnet.pontem.network/ws#/explorer)).
 - [Celo](https://github.com/celo-org/celo-blockchain) - Blockchain with EVM and MoveVM ([coming soon](https://www.businesswire.com/news/home/20210921006104/en/Celo-Sets-Sights-On-Becoming-Fastest-EVM-Chain-Through-Collaboration-With-Mysten-Labs)).
 - [Diem](https://github.com/diem/diem) - The original Move based blockchain from Meta (form. Libra by Facebook) (discontinued).
+- [ChainX](https://github.com/chainx-org/ChainX) - Bitcoin's layer2 smart contract network has already supported WASM and EVM, and is supporting MoveVM (in [mainnet](https://scan.chainx.org)).
 
 ## Books
 
@@ -63,9 +66,10 @@ Move is a programming language for writing safe smart contracts originally devel
 
 - [Move Language Discord](https://discord.gg/9K7ca8Vnr7)
 - [Move @ Sui by Mysten Labs Discord](https://discord.gg/sui)
-- [Move @ 0L Discord](https://discord.gg/zzXzhbE3aN)
+- [Move @ 0L Discord](https://discord.gg/0lnetwork)
 - [Move @ Starcoin Discord](https://discord.gg/starcoin)
 - [Move @ Aptos Discord](https://discord.gg/aptoslabs)
+- [MoveChina](https://move-china.com) - The largest Chinese community for the Move programming language.
 
 ## Code
 
@@ -86,6 +90,7 @@ Code written in Move.
 - [FAI stablecoin](https://github.com/BFlyFinance/FAI) - An over-collateralized stable coin deployed on Starcoin.
 - [FLY stablecoin](https://github.com/BFlyFinance/FLY) - An implementation of forked OHM that deployed on Starcoin.
 - [Synthetic token backed by a basket containing a reserve of other tokens](https://github.com/OLSF/libra/blob/main/language/diem-framework/modules/XDX.move) - From Diem.
+- [XBTC](https://github.com/OmniBTC/OmniBridge/blob/main/aptos/bridge/sources/xbtc.move) - BTC mirror asset on Aptos.
 
 ### Non-Fungible Tokens
 
@@ -147,6 +152,7 @@ The ability to separate blockchain-specific framework logic from the generic fun
 - [TaoHe](https://github.com/taoheorg/taohe) - A collection of nestable Move resources.
 - [Starcoin Framework Commons](https://github.com/starcoinorg/starcoin-framework-commons) - Libraries for Move commons utility on starcoin-framework. From Starcoin.
 - [Movemate](https://github.com/pentagonxyz/movemate) - Smart contract building blocks for Aptos and Sui (Math utilities, governance contracts, escrow, and more). Maintained by the Pentagon team.
+- [Move cron parser](https://github.com/snowflake-so/move-cron-parser#readme) - Library is built for a purpose of parsing cron expression. Maintained by Snowflake Network team.
 
 ### Miscellaneous
 
@@ -157,6 +163,7 @@ The ability to separate blockchain-specific framework logic from the generic fun
 - [Move Package Manager](https://github.com/move-language/move/tree/main/language/tools/move-cli) - Like `cargo` or `npm` for Move: single CLI (and corresponding Rust API's for other tools to hook into) for building, running, testing, debugging, and verifying Move [packages](https://move-language.github.io/move/). Maintained by the Move core team.
 - [Move Prover](https://github.com/move-language/move/tree/main/language/move-prover) - Formal verification of user-defined specifications written in Move source code. Maintained by the Move core team.
 - [Move Read/Write Set Analyzer](https://github.com/move-language/move/tree/main/language/tools/read-write-set) - Static analysis tool for computing an overapproximation of the global memory touched by a Move program. Maintained by the Move core team.
+- [Move Playground JS Library](https://github.com/imcoding-online/js-move-playground) - Wrapping [Move Playground by Pontem](https://playground.pontem.network/) as a JavaScript library for browser. You can use it to build your own Move Playground.
 
 ## IDEs
 
@@ -177,6 +184,20 @@ The ability to separate blockchain-specific framework logic from the generic fun
 - [Fewcha Aptos Wallet](https://github.com/fewcha-wallet/fewcha.app) - The wallet of layer 1 blockchain Aptos ([Chrome Webstore](https://chrome.google.com/webstore/detail/fewcha-aptos-wallet/ebfidpplhabeedpnhjnobghokpiioolj)).
 - [bcs-js](https://github.com/pontem-network/lcs-js) - JavaScript implementation of the [BCS](https://github.com/diem/bcs) serialization scheme used by Move, may be useful for implementing wallets.
 - [ComingChat](https://coming.chat/) - A decentralized social finance/web3 portal.  Supporting public chain wallets, such as Sui and Aptos wallets.
+- [Suiet Wallet](https://github.com/suiet/suiet) - A open-source wallet for Sui. ([Website](https://suiet.app)) 
+
+### Wallet Adapters
+
+- [Sui Wallet](https://github.com/MystenLabs/sui/tree/main/wallet-adapter) - Sui Wallet Adapter.
+- [Suiet Wallet](https://github.com/suiet/wallet-adapter) - Suiet Wallet Adapter.
+
+### Wallet Kits
+
+- [Suiet Wallet Kit](https://github.com/suiet/wallet-kit) - A package support all Sui wallets with customizable UI.
+
+## SDKs
+- [go-sui-sdk](https://github.com/coming-chat/go-sui-sdk) - Sui Golang SDK.
+- [go-aptos-sdk](https://github.com/coming-chat/go-aptos-sdk) - Aptos Golang SDK.
 
 ## Papers
 
@@ -203,6 +224,10 @@ The ability to separate blockchain-specific framework logic from the generic fun
 
 - [Move and Sui with Sam Blackshear from Mysten Labs](https://zeroknowledge.fm/228-2/)
 - [Move AMA covering Move origin story](https://twitter.com/i/spaces/1jMKgepNOleJL)
+
+## Blog Posts
+- [Comparing Move and Rust smart contract development](https://medium.com/@kklas/smart-contract-development-move-vs-rust-4d8f84754a8f)
+- [Comparing Diem-style Move and Sui Move](https://sui.io/resources-move/why-we-created-sui-move)
 
 ## Contributing
 
